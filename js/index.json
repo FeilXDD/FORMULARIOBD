@@ -1,0 +1,30 @@
+{
+  "files.exclude": {
+    "**/.tmp": true,
+    "**/temp": true,
+    "**/tmp": true
+  }
+}
+
+"java.home": "/path/to/your/jdk",
+"java.project.sourcePaths": [
+  "src/main/java"
+]
+
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run Node Server",
+      "type": "shell",
+      "command": "node",
+      "args": [
+        "server.js"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}

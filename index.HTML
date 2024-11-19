@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Document</title>
+</head>
+
+<body>
+<header>
+    <section id="header">
+
+        <article>
+            <h1 id="titulo">Manejo Alumnos</h1>
+        </article>
+    </section>
+</header>
+<main>
+    <section id="main">
+        <article id="sub-titulo">FORMULARIOS ALUMNOS</article>
+        <article>
+            <ul>
+                <li>DOCUMENTO: <input type="text" id="tex-doc" onblur="Buscar()"></li>
+                <li>TIPO DOC: <input type="text" id="tex-tipo-doc"></li>
+                <li>NOMBRES: <input type="text" id="tex-nombre"></li>
+                <li>APELLIDOS: <input type="text" id="tex-apellido"></li>
+                <li>GENERO: <br>
+                    <ul>
+                        <select name="genero" id="tex-genero">
+                            <option value="M">Masculino</option>
+                            <option value="F">Femenino</option>
+                            <option value="L">Lesbiana</option>
+                            <option value="G">Gay</option>
+                            <option value="B">Bisexual</option>
+                            <option value="T">Transexual</option>
+                            <option value="generoinexistente">Género No numerico</option>
+                        </select>
+                    </ul>
+                </li>
+                <li>ESTADO: <br>
+                    <ul>
+                        <select name="estado" id="tex-estado">
+                            <option value="A">ACTIVO</option>
+                            <option value="R">RETIRADO</option>
+                        </select>
+                    </ul>
+                </li>
+                <li>CIUDAD DE NACIMIENTO: <input type="text" id="tex-ciudad-nac"></li>
+            </ul>
+
+        </article>
+        <article>
+            <button onclick="Guardar()">GUARDAR</button>
+            <button onclick="Buscar()">BUSCAR</button>
+            <button onclick="Modificar()">MODIFICAR</button>
+            <button onclick="Retirado()">RETIRADO</button>
+            <button onclick="BusquedaMasiva()">Busqueda Masiva</button>
+
+        </article>
+        <table border="1">
+            <tr>
+                <th>DOCUMENTO</th>
+                <th>TIPO DOC</th>
+                <th>NOMBRES</th>
+                <th>APELLIDOS</th>
+                <th>GENERO</th>
+                <th>ESTADO</th>
+                <th>CIUDAD DE NACIMIENTO</th>
+            </tr>
+            <tbody id="cuerpo">
+                
+
+
+            </tbody>
+
+        </table>
+
+    </section>
+</main>
+<script src="js/index.js"></script>
+<script src="js/Areas.js"></script>
+<script src="js/Generos.js"></script>
+<script src="js/Estados.js"></script>
+<script src="js/municjson.js"></script>
+<script src="js/Tiposdoc.js"></script>
+<script src="js/areasjson.js"></script>
+</body>
+
+</html>
